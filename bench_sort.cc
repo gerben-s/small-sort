@@ -239,7 +239,7 @@ void BM_SmallSort(benchmark::State& state) {
   std::vector<int> buf(FLAGS_number);
   std::mt19937 rnd;
   std::uniform_int_distribution<int> dist(0, 100000000);
-  auto num_batches = (FLAGS_number / n) * n;
+  auto num_batches = FLAGS_number / n;
   // Make sure to benchmark in large batches otherwise the overhead of pausing and
   // resuming timer makes the benchmark inaccurate for sorting a few elements.
   while (state.KeepRunningBatch(num_batches)) {
