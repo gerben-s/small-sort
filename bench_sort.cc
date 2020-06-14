@@ -253,10 +253,10 @@ void BM_SmallSort(benchmark::State& state) {
     }
   }
 }
-BENCHMARK_TEMPLATE(BM_SmallSort, gerben::BubbleSort2)->RangeMultiplier(2)->Range(2, 64);
-BENCHMARK_TEMPLATE(BM_SmallSort, gerben::InsertionSort)->RangeMultiplier(2)->Range(2, 64);
-BENCHMARK_TEMPLATE(BM_SmallSort, reese::insertion_sort)->RangeMultiplier(2)->Range(2, 64);
-BENCHMARK_TEMPLATE(BM_SmallSort, gerben::SelectionSort)->RangeMultiplier(2)->Range(2, 64);
+BENCHMARK_TEMPLATE(BM_SmallSort, gerben::BubbleSort2)->RangeMultiplier(2)->Range(2, 128);
+BENCHMARK_TEMPLATE(BM_SmallSort, gerben::InsertionSort)->RangeMultiplier(2)->Range(2, 128);
+BENCHMARK_TEMPLATE(BM_SmallSort, reese::insertion_sort)->RangeMultiplier(2)->Range(2, 128);
+BENCHMARK_TEMPLATE(BM_SmallSort, gerben::SelectionSort)->RangeMultiplier(2)->Range(2, 128);
 
 int main(int argc, char* argv[]) {
   benchmark::Initialize(&argc, argv);
