@@ -135,6 +135,8 @@ void HeapSort(T* arr, size_t n) {
 
 namespace reese {
   
+// This code is copy pasted from a reddit post by bjorn-reese
+// https://www.reddit.com/r/cpp/comments/gtkrtg/hoares_rebuttal_and_bubble_sorts_comeback/fta6sai
 template <typename RandomAccessIterator, typename Compare>
 RandomAccessIterator push_sorted(RandomAccessIterator first,
                                  RandomAccessIterator last,
